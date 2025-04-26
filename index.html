@@ -42,5 +42,29 @@
 </div>
 
 <script src="script.js"></script>
+<script>
+function updateBackground() {
+  const hour = new Date().getHours();
+  let color = "#fafafa"; // 默认背景色
+
+  if (hour >= 6 && hour < 12) {
+    color = "#FFF7E0"; // 早上：淡黄色
+  } else if (hour >= 12 && hour < 18) {
+    color = "#E0F7FA"; // 下午：浅蓝色
+  } else if (hour >= 18 && hour < 21) {
+    color = "#FFE0E0"; // 傍晚：淡粉色
+  } else {
+    color = "#2C3E50"; // 晚上：深蓝色
+  }
+
+  document.body.style.backgroundColor = color;
+}
+
+// 页面一加载就更新一次背景
+updateBackground();
+
+// 如果想让页面一直跟着变化，可以设置定时器（比如每1分钟检测一次）
+setInterval(updateBackground, 60000);
+</script>
 </body>
 </html>
