@@ -26,14 +26,17 @@ header {
 }
 
 .photo img {
-    width: 100%;
+    width: 80%;
     height: auto;
     cursor: pointer;
-    transition: 0.3s;
+    transition: transform 0.5s ease, opacity 0.5s ease; /* 平滑放大 + 透明变化 */
+    margin: 10px auto;
+    display: block;
 }
 
 .photo img:hover {
-    transform: scale(1.05);
+    transform: scale(1.1); /* 悬停时放大10% */
+    opacity: 0.9; /* 悬停时稍微透明一点，呼吸感 */
 }
 
 .photo p {
