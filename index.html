@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Moments</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Photo Moments</h1>
+    <p>记录生活的点滴</p>
+</header>
+
+<nav class="filter-menu">
+    <button onclick="filterPhotos('all')">全部</button>
+    <button onclick="filterPhotos('travel')">旅行</button>
+    <button onclick="filterPhotos('daily')">日常</button>
+    <button onclick="filterPhotos('landscape')">风景</button>
+</nav>
+
+<main class="gallery">
+    <div class="photo" data-category="travel">
+        <img src="images/photo1.jpg" alt="描述1" onclick="openLightbox(this)">
+        <p>海边的早晨</p>
+    </div>
+    <div class="photo" data-category="daily">
+        <img src="images/photo2.jpg" alt="描述2" onclick="openLightbox(this)">
+        <p>校园午后</p>
+    </div>
+</main>
+
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span id="prev" class="nav" onclick="changeImage(-1)">❮</span>
+    <img id="lightbox-img" src="">
+    <span id="next" class="nav" onclick="changeImage(1)">❯</span>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
