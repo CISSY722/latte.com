@@ -21,17 +21,17 @@
 </nav>
 
 <main class="gallery">
-    <div class="photo" data-category="旅行日记本">
-        <img src="images/1.jpg" alt="21年在海南和朋友捡到的贝壳" onclick="openLightbox(this)">
-        <p>时代的眼泪</p>
+    <div class="photo" data-category="关于学生时代">
+        <img src="images/1.jpg" alt="去年" onclick="openLightbox(this)">
+        <p>2024年和师姐师哥的毕业照</p>
     </div>
-    <div class="photo" data-category="day and day">
+    <div class="photo" data-category="关于学生时代">
         <img src="images/2.jpg" alt="2333" onclick="openLightbox(this)">
-        <p>23334</p>
+        <p>024年和师姐师哥的毕业照</p>
     </div>
-     <div class="photo" data-category="daily">
-        <img src="images/photo2.jpg" alt="描述2" onclick="openLightbox(this)">
-        <p>校园午后</p>
+     <div class="photo" data-category="关于学生时代">
+        <img src="images/3.jpg" alt="描述2" onclick="openLightbox(this)">
+        <p>024年和师姐师哥的毕业照</p>
     </div>
 </main>
 
@@ -47,15 +47,15 @@ function updateBackground() {
   const hour = new Date().getHours();
   let color = "#fafafa"; // 默认背景色
 
-  if (hour >= 6 && hour < 12) {
-    color = "#FFF7E0"; // 早上：淡黄色
-  } else if (hour >= 12 && hour < 18) {
-    color = "#E0F7FA"; // 下午：浅蓝色
-  } else if (hour >= 18 && hour < 21) {
-    color = "#FFE0E0"; // 傍晚：淡粉色
-  } else {
-    color = "#2C3E50"; // 晚上：深蓝色
-  }
+if (hour >= 6 && hour < 12) {
+    color = "#FFE0E0"; // 早上：淡粉色
+} else if (hour >= 12 && hour < 18) {
+    color = "#FFF7E0"; // 下午：淡黄色
+} else if (hour >= 18 && hour < 21) {
+    color = "#E0F7FA"; // 傍晚：淡蓝色
+} else {
+    color = "#000000"; // 晚上：黑色
+}
 
   document.body.style.backgroundColor = color;
 }
