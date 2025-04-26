@@ -32,6 +32,7 @@ header {
     transition: transform 0.5s ease, opacity 0.5s ease; /* 平滑放大 + 透明变化 */
     margin: 10px auto;
     display: block;
+    border-radius: 15px; /* 添加圆角，15px 可以调节 */
 }
 
 .photo img:hover {
